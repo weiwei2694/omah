@@ -85,6 +85,10 @@ img {
 	font-family: 'Poppins', sans-serif;
 }
 
+.viewall {
+	@apply font-medium text-black tracking-[1%] text-2xl underline;
+}
+
 .section__padding-block {
 	@apply py-16;
 }
