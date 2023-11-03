@@ -42,3 +42,16 @@ export const forSale = [
 		total_room: '2 room',
 	},
 ];
+
+export const testimonials = [
+	{
+		image: '/jone-doe.webp',
+		name: 'Jone Doe',
+		title: 'I am very satisfied buying a house ere because it is fast and easy',
+	},
+	{
+		image: '/angle-doe.webp',
+		name: 'Angle Doe',
+		title: 'Buying a house here is very cheap and high quality',
+	},
+];
