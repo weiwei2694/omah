@@ -23,7 +23,7 @@ const TheLatest = () => {
       {/* Content */}
       <div className='flex flex-wrap justify-between gap-5'>
         {forSale.map(e => (
-          <div className='flex flex-col space-y-2'>
+          <div key={e.image} className='flex flex-col space-y-2'>
             <div className='relative'>
               <Image
                 src={e.image}
