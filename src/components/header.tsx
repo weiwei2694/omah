@@ -27,20 +27,25 @@ const Header = () => {
       {/* Content */}
       <div>
         {/* Heading */}
-        <section className='section__padding flex justify-between items-center'>
+        <section className='section__padding flex flex-col xl:flex-row justify-start xl:justify-between items-start xl:items-center'>
           <Heading className='text-[64px]'>Ready to<br /> find your new home</Heading>
           <div className='flex gap-x-5 items-start justify-start'>
             <div className='w-[50px] h-[3px] rounded bg-orange mt-3' />
-            <SubHeading>
+            <SubHeading className='hidden xl:block'>
               looking for a house with a low price<br />
               and quality here, and sell your house<br />
+              quickly here
+            </SubHeading>
+            <SubHeading className='block xl:hidden'>
+              looking for a house with a low price
+              and quality here, and sell your house
               quickly here
             </SubHeading>
           </div>
         </section>
 
         {/* Sub Section */}
-        <section className='section__margin-right relative'>
+        <section className='section__margin-right relative hidden xl:block'>
           <Image
             src='/header-picture.webp'
             alt='Picture of Omah'
