@@ -55,3 +55,16 @@ export const testimonials = [
 		title: 'Buying a house here is very cheap and high quality',
 	},
 ];
+
+export const blogs = [
+	{
+		title: 'Creating a clean and elegant home',
+		name: 'Albert firdaus',
+		image: '/blog-picture-2.webp',
+	},
+	{
+		title: 'Good paint color for home',
+		name: 'Rusy firdaus',
+		image: '/blog-picture-3.webp',
+	},
+];
