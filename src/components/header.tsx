@@ -1,13 +1,7 @@
 'use client';
 
-import { usePathname } from 'next/navigation';
+// vendors
 import Image from 'next/image'
-import Heading from './sharing/heading'
-import SubHeading from './sharing/subheading'
-import { lists, listsFindHome } from '@/app/constants'
-import { cn } from '@/lib/utils';
-import { Button } from './ui/button';
-
 // Shadcn
 import {
   Select,
@@ -16,28 +10,19 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
+import { Button } from './ui/button';
+// components
+import Navbar from './navbar/navbar';
+import Heading from './sharing/heading'
+import SubHeading from './sharing/subheading'
+// constant
+import { listsFindHome } from '@/app/constants';
 
 const Header = () => {
-  const path = usePathname();
-
   return (
     <header>
       {/* Nav */}
-      <nav className='section__padding !py-10 flex items-center justify-between'>
-        <h3 className='text-2xl tracking-[1%] font-medium text-black'>Omah<span className='text-orange'>.</span></h3>
-        <ul className='flex gap-x-12 items-center'>
-          {lists.map(e => {
-            const isActive = path === '/' && e === 'Home';
-
-            return (
-              <li key={e} className={cn('text-base tracking-[1%] cursor-pointer', isActive ? 'text-black' : 'text-gray')}>{e}</li>
-            )
-          })}
-          <li>
-            <Button>Log In</Button>
-          </li>
-        </ul>
-      </nav>
+      <Navbar />
 
       {/* Content */}
       <div>
