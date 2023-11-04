@@ -1,4 +1,5 @@
 import Blog from '@/components/blog'
+import Cta from '@/components/cta'
 import Header from '@/components/header'
 import Testimonials from '@/components/testimonials'
 import TheLatest from '@/components/the-latest'
@@ -10,6 +11,7 @@ export default function Home() {
       <TheLatest />
       <Testimonials />
       <Blog />
+      <Cta />
     </>
   )
 }
