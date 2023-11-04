@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Heading from "./sharing/heading"
-import { blogs, forSale } from "@/app/constants"
+import { blogs } from "@/app/constants"
 import Image from "next/image"
 import SubHeading from "./sharing/subheading"
 
@@ -17,7 +17,7 @@ const Blog = () => {
       </div>
 
       {/* Content */}
-      <div className='grid grid-cols-2 gap-5'>
+      <div className='grid grid-cols-1 xl:grid-cols-2 gap-10 xl:gap-5'>
         <div className='flex flex-col space-y-5'>
           <div className='relative'>
             <Image
@@ -47,8 +47,8 @@ const Blog = () => {
         </div>
         <div className='flex flex-col space-y-10'>
           {blogs.map(e => (
-            <div key={e.image} className='flex flex-row justify-between gap-x-10'>
-              <div className='flex flex-col justify-between space-y-3 max-w-[260px]'>
+            <div key={e.image} className='flex flex-col-reverse xl:flex-row justify-start xl:justify-between gap-5 xl:gap-10'>
+              <div className='flex flex-col justify-start xl:justify-between space-y-5 xl:space-y-3 max-w-full xl:max-w-[260px]'>
                 <Heading className='text-2xl cursor-pointer hover:underline'>{e.title}</Heading>
                 <SubHeading>{e.name}</SubHeading>
               </div>
@@ -57,7 +57,7 @@ const Blog = () => {
                 alt={e.image}
                 width={286}
                 height={184}
-                className='object-cover w-[286px] h-full'
+                className='object-cover w-full xl:w-[286px] h-full'
               />
             </div>
           ))}
